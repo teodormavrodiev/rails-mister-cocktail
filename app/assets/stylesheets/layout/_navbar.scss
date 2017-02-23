@@ -1,7 +1,7 @@
 /* Main class */
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
+  background: #C451D6;
   transition: all 0.3s ease;
   display: flex;
   height: 70px;
@@ -21,7 +21,7 @@
 
 /* Navbar logo */
 .navbar-wagon-brand img {
-  width: 50px;
+  width: 45px;
 }
 
 /* Navbar right section (with form, links, button) */
@@ -40,11 +40,11 @@
 
 /* Navbar standard link */
 .navbar-wagon-link {
-  color: #616668;
+  color: #1EEA3F;
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: #74E6BE;
   text-decoration: none;
 }
 
@@ -54,10 +54,10 @@
   padding: 0 20px;
   border-radius: 20em;
   line-height: 40px;
-  background-color: #D23333;
+  background-color: #1EEA3F;
   color: white;
   font-size: 14px;
-  border: 2px solid #D23333;
+  border: 2px solid #74E6BE;
 }
 .navbar-wagon-button:hover {
   color: white;

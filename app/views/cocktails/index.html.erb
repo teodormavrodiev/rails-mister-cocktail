@@ -1,7 +1,34 @@
-<h1> Having a party? Check out these cocktails! </h1>
-<% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail.name, cocktail_path(cocktail) %>
-  <br>
-<% end %>
-<br>
-<%= link_to "Add Cocktail", new_cocktail_path %>
+<!-- add banner -->
+<%= render "shared/banner" %>
+
+<div class="container">
+  <div class="row padded">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-6 col-md-2">
+
+        <div class="card">
+          <div class="card-category"><%= cocktail.name %> </div>
+          <div class="card-description">
+            <h2> Ingredients: </h2>
+            <p>
+              <% cocktail.ingredients.each_with_index do |ingredient, index| %>
+                <% if index == 0 %>
+                  <%= ingredient.name %>
+                <% else %>
+                 , <%= ingredient.name %>
+                <% end %>
+              <% end %>
+            </p>
+          </div>
+          <%= link_to cocktail.name, cocktail_path(cocktail), class: "card-link" %>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-xs-2 col-xs-offset-5 padded">
+      <%= link_to "Add Cocktail", new_cocktail_path, class: "navbar-wagon-button" %>
+    </div>
+  </div>
+</div>

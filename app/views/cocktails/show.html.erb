@@ -1,11 +1,15 @@
-<h1> <%= @cocktail[:name] %> </h1>
-<% @cocktail.doses.reverse.each_with_index do |dose, index| %>
+<div class="container">
+
+  <h1> <%= @cocktail[:name] %> </h1>
+  <% @cocktail.doses.reverse.each_with_index do |dose, index| %>
   <p> <b> Step <%= index + 1 %></b>
   <p> <b> Ingredient: </b> <%= dose.ingredient.name %> </p>
   <p> <b> Instructions: </b> <%= dose.description %>
   <br>
   <%= link_to "Remove this step", delete_dose_path(dose), method: :delete %>
   <br>
-<% end %>
-<br>
-<%= link_to "Add a step", new_cocktail_dose_path(@cocktail) %>
+  <% end %>
+  <br>
+  <%= link_to "Add a step", new_cocktail_dose_path(@cocktail) %>
+
+</div>
