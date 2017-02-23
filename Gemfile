@@ -24,6 +24,7 @@ gem 'coffee-rails', '~> 4.2'
 gem "font-awesome-sass"
 gem "simple_form"
 gem "autoprefixer-rails"
+gem 'faker', '~> 1.6', '>= 1.6.3'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
